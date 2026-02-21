@@ -16,7 +16,7 @@ overflow-x:hidden;
 }
 
 /* ============================= */
-/* NAVBAR PREMIUM */
+/* NAVBAR */
 /* ============================= */
 
 .navbar{
@@ -40,6 +40,7 @@ font-size:1.4rem;
 }
 
 /* MENU DESKTOP */
+
 .menu{
 display:flex;
 gap:30px;
@@ -76,7 +77,6 @@ border-radius:3px;
 transition:0.4s;
 }
 
-/* animação X */
 .hamburger.active span:nth-child(1){
 transform:rotate(45deg) translate(6px,6px);
 }
@@ -142,11 +142,9 @@ color:#e2e8f0;
 max-width:600px;
 }
 
-/* BOTÃO HERO */
 .btn-hero{
 padding:14px 35px;
 background:#3b82f6;
-margin-top: 20px;
 border-radius:50px;
 color:white;
 text-decoration:none;
@@ -176,76 +174,68 @@ color:#3b82f6;
 }
 
 /* ============================= */
-/* SERVICES */
+/* SERVIÇOS */
 /* ============================= */
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
 background:#0f172a;
-padding:25px;
 border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,0.5);
 transition:0.4s;
-cursor:pointer;
+overflow:hidden; /* ESSENCIAL */
 }
 
 .card:hover{
 transform:translateY(-8px);
 }
 
-/* ============================= */
-/* MODAL */
-/* ============================= */
+/* IMAGEM DO CARD */
 
-.modal{
-display:none;
-position:fixed;
-z-index:2000;
-left:0;
-top:0;
+.card img{
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
+height:200px;
+object-fit:cover;
+display:block;
 }
 
-.modal-content{
-max-width:90%;
-max-height:80%;
-border-radius:15px;
+/* CONTEÚDO DO CARD */
+
+.card-content{
+padding:20px;
 }
 
-.modal.active{
+.card-content h3{
+margin-bottom:10px;
+color:#3b82f6;
+}
+
+.card-content p{
+font-size:0.95rem;
+color:#cbd5e1;
+}
+
+/* ============================= */
+/* CONTATO */
+/* ============================= */
+
+#contato{
 display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:20px;
+padding:120px 10%;
 }
 
-/* ============================= */
-/* BOTÃO WHATSAPP FLUTUANTE */
-/* ============================= */
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-z-index:1500;
-transition:0.3s;
-}
-
-.whatsapp-float:hover{
-transform:scale(1.08);
+#contato p{
+max-width:600px;
+color:#e2e8f0;
 }
 
 /* ============================= */
