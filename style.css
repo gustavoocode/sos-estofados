@@ -1,0 +1,296 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:#050816;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+/* ============================= */
+/* NAVBAR PREMIUM */
+/* ============================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,8,22,0.95);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+color:#3b82f6;
+font-weight:800;
+font-size:1.4rem;
+}
+
+/* MENU DESKTOP */
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#3b82f6;
+}
+
+/* ============================= */
+/* HAMBURGER */
+/* ============================= */
+
+.hamburger{
+display:none;
+flex-direction:column;
+gap:6px;
+cursor:pointer;
+z-index:1100;
+}
+
+.hamburger span{
+width:28px;
+height:3px;
+background:white;
+border-radius:3px;
+transition:0.4s;
+}
+
+/* animação X */
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(6px,6px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+opacity:0;
+visibility:hidden;
+transition:0.4s;
+z-index:900;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+gap:20px;
+background:radial-gradient(circle at center, #0f172a 0%, #050816 70%);
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:800;
+}
+
+.hero span{
+color:#3b82f6;
+}
+
+.hero p{
+font-size:1.1rem;
+color:#e2e8f0;
+max-width:600px;
+}
+
+/* BOTÃO HERO */
+.btn-hero{
+padding:14px 35px;
+background:#3b82f6;
+margin-top: 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:700;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn-hero:hover{
+background:#2563eb;
+transform:translateY(-5px);
+}
+
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
+
+section{
+padding:120px 10%;
+text-align:center;
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:50px;
+color:#3b82f6;
+}
+
+/* ============================= */
+/* SERVICES */
+/* ============================= */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0f172a;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+transition:0.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* ============================= */
+/* MODAL */
+/* ============================= */
+
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+max-width:90%;
+max-height:80%;
+border-radius:15px;
+}
+
+.modal.active{
+display:flex;
+}
+
+/* ============================= */
+/* BOTÃO WHATSAPP FLUTUANTE */
+/* ============================= */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+z-index:1500;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+background:#0f172a;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:900px){
+
+.hamburger{
+display:flex;
+}
+
+.menu{
+position:fixed;
+top:0;
+right:-100%;
+width:280px;
+height:100vh;
+background:#0f172a;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:40px;
+transition:right 0.4s ease;
+z-index:1001;
+box-shadow:-10px 0 40px rgba(0,0,0,0.6);
+}
+
+.menu.active{
+right:0;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+}
